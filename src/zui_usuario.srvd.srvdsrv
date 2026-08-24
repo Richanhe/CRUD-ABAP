@@ -1,0 +1,5 @@
+@EndUserText.label: 'Usuários'
+define service ZUI_USUARIO {
+  expose ZC_USUARIO         as Users;
+  expose ZC_USUARIO_DELETED as DeletedUsers;
+}
