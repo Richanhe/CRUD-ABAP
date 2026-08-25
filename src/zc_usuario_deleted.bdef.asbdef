@@ -3,5 +3,7 @@ strict ( 2 );
 
 define behavior for ZC_USUARIO_DELETED
 {
+  use association _Hobbies { create; }
+
   use action restore;
 }

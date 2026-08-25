@@ -2,4 +2,6 @@
 define service ZUI_USUARIO {
   expose ZC_USUARIO         as Users;
   expose ZC_USUARIO_DELETED as DeletedUsers;
+  expose ZI_HOBBY           as Hobbies;
+  expose ZI_U_H             as UserHobbies;
 }

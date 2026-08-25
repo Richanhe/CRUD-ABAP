@@ -8,6 +8,8 @@ define root view entity ZC_USUARIO provider contract transactional_query as proj
     lastname,
     age,
     created_at,
-    updated_at
+    updated_at,
+    
+    _Hobbies
 }
 where deleted_at is initial

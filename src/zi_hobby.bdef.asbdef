@@ -1,0 +1,14 @@
+managed implementation in class zbp_i_hobby unique;
+strict ( 2 );
+
+define behavior for ZI_HOBBY
+persistent table ztb_hobbies
+lock master
+authorization master ( instance )
+{
+  create ( authorization : global );
+  update;
+  delete;
+
+  field ( readonly, numbering : managed ) hobby_id;
+}

@@ -9,6 +9,8 @@ define root view entity ZC_USUARIO_DELETED provider contract transactional_query
     age,
     created_at,
     updated_at,
-    deleted_at
+    deleted_at,
+    
+    _Hobbies
 }
 where deleted_at is not initial

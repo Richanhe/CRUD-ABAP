@@ -6,9 +6,13 @@
 "ZI_USUARIO"
 ],
 "ASSOCIATED":
-[],
+[
+"ZI_U_H"
+],
 "BASE":
-[],
+[
+"ZI_USUARIO"
+],
 "ANNO_REF":
 [],
 "SCALAR_FUNCTION":

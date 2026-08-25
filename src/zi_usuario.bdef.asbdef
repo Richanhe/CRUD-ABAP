@@ -1,11 +1,10 @@
 managed implementation in class zbp_i_usuario unique;
 strict ( 2 );
 
-define behavior for ZI_USUARIO //alias <alias_name>
+define behavior for ZI_USUARIO
 persistent table ztb_usuarios
 lock master
 authorization master ( instance )
-//etag master <field_name>
 {
   create ( authorization : global );
   update;
@@ -13,8 +12,24 @@ authorization master ( instance )
   action softDelete;
   action restore;
 
+  association _Hobbies { create; }
+
   field ( readonly, numbering: managed ) user_id;
   field ( readonly ) created_at,
                      updated_at,
                      deleted_at;
+}
+
+define behavior for ZI_U_H
+persistent table ztb_u_h
+lock dependent by _Usuario
+authorization dependent by _Usuario
+{
+    update;
+    delete;
+
+    association _Usuario;
+    association _Hobby;
+
+    field ( readonly ) user_id;
 }
